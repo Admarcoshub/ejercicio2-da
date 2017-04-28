@@ -3,17 +3,27 @@
 <html>
     <head>
     	<title>Ugly calculator</title>
+      <link rel="stylesheet" href="./css/min/main.css"
     </head>
     <body>
-    	<input type="text" id="numero-uno">
-    	<input type="text" id="numero-dos">
-    	<input type="button" onclick="calculadora.sumar()" value="sumar">
-    	<input type="button" onclick="calculadora.restar()" value="restar">
-    	<input type="button" onclick="calculadora.multiplicar()" value="multiplicar">
-    	<input type="button" onclick="calculadora.dividir()" value="divifir">
 
-    	<p>Total: <span id="total"></span></p>
+      <section id="container">
+        <div id="container-in">
+          <input type="text" id="numero-uno">
+        	<input type="text" id="numero-dos">
+        	<input type="button" onclick="sumar()" value="sumar">
+          <input type="button" onclick="restar()" value="restar">
+          <input type="button" onclick="multiplicar()" value="multiplicar">
+          <input type="button" onclick="dividir()" value="dividir">
+        </div>
+        <div class="result">
+          <p id="total"></p>
+        </div>
 
-    	<script src="main.js"></script>
+      </section>
+
+
+
+    	<script src="./js/build/program.js"></script>
     </body>
 </html>

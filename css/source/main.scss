@@ -1,7 +1,30 @@
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
+$fv: #009045;
 
 body {
   font: 100% $font-stack;
   color: $primary-color;
+  background: $fv;
+}
+
+#container {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+}
+
+#container-in {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  justify-content:center;
+}
+
+#total {
+  font-size: 3em;
+  color: #ffffff;
+  text-align: center;
 }

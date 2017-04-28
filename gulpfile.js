@@ -22,6 +22,12 @@ gulp.task( 'ts', function () {
 	.pipe(gulp.dest('js/build'));
 });
 
+gulp.task('sass', function() {
+ gulp.src('css/source/*.scss')
+ .pipe(sass())
+ .pipe(gulp.dest('css/min/'))
+});
+
 gulp.task('default', function (){
 	gulp.watch('js/source/*.ts', ['ts'])
 })

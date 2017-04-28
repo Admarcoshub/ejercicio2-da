@@ -1,3 +1,22 @@
 body {
   font: 100% Helvetica, sans-serif;
-  color: #333; }
+  color: #333;
+  background: #009045; }
+
+#container {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; }
+
+#container-in {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  justify-content: center; }
+
+#total {
+  font-size: 3em;
+  color: #ffffff;
+  text-align: center; }

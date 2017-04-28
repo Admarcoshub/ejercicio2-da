@@ -1,80 +1,32 @@
-class Calc{
-	constructor(){
-	}
 
-	public sumar(numeroUno: number, numeroDos: number):number{
-		return numeroUno+numeroDos;
-	}
-	public restar(numeroUno: number, numeroDos: number):number{
-		return numeroUno-numeroDos;
-	}
-	public multiplicar(numeroUno: number, numeroDos: number):number{
-		return numeroUno*numeroDos;
-	}
-	public dividir(numeroUno: number, numeroDos: number):number{
-		return numeroUno/numeroDos;
-	}
-
+function sumar () {
+	var numero1:number = <HTMLInputElement>document.getElementById('numero-uno').value;
+	var numero2:number = <HTMLInputElement>document.getElementById('numero-dos').value;
+	var resultado:number = parseInt(numero1) + parseInt(numero2);
+	var etiqueta = document.getElementById('total');
+	etiqueta.innerHTML = resultado;
 }
 
-/// <reference path="calc.ts" />
-/// <reference path="htmlInterfaz.ts" />
-
-class Calculadora{
-	calc: Calc;
-	htmlInterfaz: HtmlInterfaz;
-
-	constructor(){
-		this.calc = new Calc();
-		this.htmlInterfaz = new HtmlInterfaz();
-	}
-
-	public sumar(){
-		this.showTotal(this.calc.sumar(this.getNumeroUno(),this.getNumeroDos()));
-	}
-	public restar(){
-		this.showTotal(this.calc.restar(this.getNumeroUno(),this.getNumeroDos()));
-	}
-	public multiplicar(){
-		this.showTotal(this.calc.multiplicar(this.getNumeroUno(),this.getNumeroDos()));
-	}
-	public dividir(){
-		this.showTotal(this.calc.dividir(this.getNumeroUno(),this.getNumeroDos()));
-	}
-
-	private getNumeroUno(){
-		return parseFloat(this.htmlInterfaz.getNumeroUnoValue());
-	}
-
-	private getNumeroDos(){
-		return parseFloat(this.htmlInterfaz.getNumeroDosValue());
-	}
-
-	private showTotal(result: number){
-		this.htmlInterfaz.renderTotal(result.toString());
-	}
-
+function restar () {
+	var numero1:number = <HTMLInputElement>document.getElementById('numero-uno').value;
+	var numero2:number = <HTMLInputElement>document.getElementById('numero-dos').value;
+	var resultado:number = parseInt(numero1) - parseInt(numero2);
+	var etiqueta = document.getElementById('total');
+	etiqueta.innerHTML = resultado;
 }
 
-var calculadora = new Calculadora();
+function multiplicar () {
+	var numero1:number = <HTMLInputElement>document.getElementById('numero-uno').value;
+	var numero2:number = <HTMLInputElement>document.getElementById('numero-dos').value;
+	var resultado:number = parseInt(numero1) * parseInt(numero2);
+	var etiqueta = document.getElementById('total');
+	etiqueta.innerHTML = resultado;
+}
 
-
-class HtmlInterfaz{
-	total: HTMLInputElement;
-	numeroUno: HTMLInputElement;
-	numeroDos: HTMLInputElement;
-	constructor(){
-		this.total = <HTMLInputElement>document.getElementById("total");
-		this.numeroUno = <HTMLInputElement>document.getElementById("numero-uno");
-		this.numeroDos = <HTMLInputElement>document.getElementById("numero-dos");
-	}
-	public getNumeroUnoValue():string{
-		return this.numeroUno.value;
-	}
-	public getNumeroDosValue():string{
-		return this.numeroDos.value;
-	}
-	public renderTotal(total: string){
-		this.total.innerHTML = total;
-	}
+function dividir () {
+	var numero1:number = <HTMLInputElement>document.getElementById('numero-uno').value;
+	var numero2:number = <HTMLInputElement>document.getElementById('numero-dos').value;
+	var resultado:number = parseInt(numero1) / parseInt(numero2);
+	var etiqueta = document.getElementById('total');
+	etiqueta.innerHTML = resultado;
 }
